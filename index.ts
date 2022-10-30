@@ -1,5 +1,8 @@
 /// Function that generates rgba-strings
-export const R = (r: number,g: number,b: number,a?: number)=>(a =(a === undefined ? 1 : a),"rgba("+(r|0)+","+(g|0)+","+(b|0)+","+a+")")
+export const R = (r: number,g: number,b: number,a?: number) => {
+  a = a === undefined ? 1 : a
+  return "rgba("+(r|0)+","+(g|0)+","+(b|0)+","+a+")"
+}
 
 /// Shorthand for Math.sin
 export const S = (n: number) => Math.sin(n)
