@@ -14,7 +14,17 @@ export const T = (n: number) => Math.tan(n)
 /// Shorthand for Math.PI
 export const PI = Math.PI
 
-//u(t) is called 60 times per second
-//t: Elapsed time in seconds
-//c: 1920x1080 canvas
+// note: really it should be called like function u(t) { code } instead of u((t) => { code }) but I don't think there are workarounds
+// u(t) is called 60 times per second
+/// t: Elapsed time in seconds
+export function u(f: (t) => void) {
+  let i = -1
+  setInterval(() => f(i++),1000/60)
+}
+
+/// c: 1920x1080 canvas
+export const c = document.createElement('canvas')
+document.body.appendChild(c)
+
 //x: 2D or webgl context for that canvas
+export const x = c.getContext("2d")
