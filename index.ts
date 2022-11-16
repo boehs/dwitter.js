@@ -24,6 +24,8 @@ export function u(f: (t) => void) {
 
 /// c: 1920x1080 canvas
 export const c = document.createElement('canvas')
+c.width=1920
+c.height=1080
 document.body.appendChild(c)
 
 //x: 2D or webgl context for that canvas
