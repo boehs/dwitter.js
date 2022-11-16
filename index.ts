@@ -5,11 +5,11 @@ export const R = (r: number,g: number,b: number,a?: number) => {
 }
 
 /// Shorthand for Math.sin
-export const S = (n: number) => Math.sin(n)
+export const S = Math.sin
 /// Shorthand for Math.cos
-export const C = (n: number) => Math.cos(n)
+export const C = Math.cos
 /// Shorthand for Math.tan
-export const T = (n: number) => Math.tan(n)
+export const T = Math.tan
 
 /// Shorthand for Math.PI
 export const PI = Math.PI
